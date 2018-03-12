@@ -49,7 +49,7 @@ app.get('/', function (req, res) {
 // get all books
 app.get('/api/books', function (req, res) {
   // send all books as JSON response
-  db.Books.find({}, function(err, books){
+  db.Book.find({}, function(err, books){
     if (err) {
       console.log("index error: " + err);
       res.sendStatus(500);
